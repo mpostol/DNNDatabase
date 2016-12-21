@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace import {
+namespace CAS.DNNDataBase.UsersManagement {
     
     
     /// <summary>
@@ -312,7 +312,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class osobycsvDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class osobycsvDataTable : global::System.Data.TypedTableBase<osobycsvRow> {
             
             private global::System.Data.DataColumn columnTytuł;
             
@@ -1474,12 +1474,6 @@ namespace import {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 osobycsvDataTable cln = ((osobycsvDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1965,7 +1959,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class osobycsv1DataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class osobycsv1DataTable : global::System.Data.TypedTableBase<osobycsv1Row> {
             
             private global::System.Data.DataColumn _columnAdres_e_mail;
             
@@ -2065,12 +2059,6 @@ namespace import {
                 rowosobycsv1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowosobycsv1Row);
                 return rowosobycsv1Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

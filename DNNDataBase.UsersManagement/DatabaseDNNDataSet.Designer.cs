@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace import {
+namespace CAS.DNNDataBase.UsersManagement {
     
     
     /// <summary>
@@ -347,7 +347,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dnn1_OnyakNECampaignDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class dnn1_OnyakNECampaignDataTable : global::System.Data.TypedTableBase<dnn1_OnyakNECampaignRow> {
             
             private global::System.Data.DataColumn columnName;
             
@@ -843,12 +843,6 @@ namespace import {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 dnn1_OnyakNECampaignDataTable cln = ((dnn1_OnyakNECampaignDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1148,7 +1142,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dnn1_OnyakNEOptInsDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class dnn1_OnyakNEOptInsDataTable : global::System.Data.TypedTableBase<dnn1_OnyakNEOptInsRow> {
             
             private global::System.Data.DataColumn columnOptInsSystemID;
             
@@ -1321,12 +1315,6 @@ namespace import {
             public dnn1_OnyakNEOptInsRow FindByOptInsSystemID(int OptInsSystemID) {
                 return ((dnn1_OnyakNEOptInsRow)(this.Rows.Find(new object[] {
                             OptInsSystemID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1520,7 +1508,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DNNRegisteredUsersDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class DNNRegisteredUsersDataTable : global::System.Data.TypedTableBase<DNNRegisteredUsersRow> {
             
             private global::System.Data.DataColumn columnUserID;
             
@@ -1726,12 +1714,6 @@ namespace import {
             public DNNRegisteredUsersRow FindByUserID(int UserID) {
                 return ((DNNRegisteredUsersRow)(this.Rows.Find(new object[] {
                             UserID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2785,7 +2767,7 @@ namespace import {
         }
     }
 }
-namespace import.DatabaseDNNDataSetTableAdapters {
+namespace CAS.DNNDataBase.UsersManagement.DatabaseDNNDataSetTableAdapters {
     
     
     /// <summary>
@@ -3097,7 +3079,7 @@ SELECT Name, Description, CreateDate, CreatedBy, SendOnce, SendOnceDate, SendWee
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::import.Properties.Settings.Default.DatabaseDNNConnectionString;
+            this._connection.ConnectionString = Properties.Settings.Default.DatabaseDNNConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3867,7 +3849,7 @@ SELECT OptInsSystemID, CampaignSystemID, Email, Enabled, CreatedDate, DisabledDa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::import.Properties.Settings.Default.DatabaseDNNConnectionString;
+            this._connection.ConnectionString = Properties.Settings.Default.DatabaseDNNConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4232,7 +4214,7 @@ SELECT OptInsSystemID, CampaignSystemID, Email, Enabled, CreatedDate, DisabledDa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::import.Properties.Settings.Default.DatabaseDNNConnectionString;
+            this._connection.ConnectionString = Properties.Settings.Default.DatabaseDNNConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

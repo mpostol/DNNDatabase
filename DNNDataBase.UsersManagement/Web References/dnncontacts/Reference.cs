@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace import.dnncontacts {
+namespace CAS.DNNDataBase.UsersManagement.dnncontacts {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -42,7 +42,7 @@ namespace import.dnncontacts {
         
         /// <remarks/>
         public Contacts() {
-            this.Url = global::import.Properties.Settings.Default.import_dnncontacts_Contacts;
+            this.Url = global::CAS.DNNDataBase.UsersManagement.Properties.Settings.Default.import_dnncontacts_Contacts;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

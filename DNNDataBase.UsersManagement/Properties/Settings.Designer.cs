@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace import.Properties {
+namespace CAS.DNNDataBase.UsersManagement.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

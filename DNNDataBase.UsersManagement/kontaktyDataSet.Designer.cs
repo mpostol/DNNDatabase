@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace import {
+namespace CAS.DNNDataBase.UsersManagement {
     
     
     /// <summary>
@@ -277,7 +277,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class KontaktyDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class KontaktyDataTable : global::System.Data.TypedTableBase<KontaktyRow> {
             
             private global::System.Data.DataColumn columnTytu;
             
@@ -1435,12 +1435,6 @@ namespace import {
                 rowKontaktyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKontaktyRow);
                 return rowKontaktyRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4522,7 +4516,7 @@ namespace import {
         }
     }
 }
-namespace import.kontaktyDataSetTableAdapters {
+namespace CAS.DNNDataBase.UsersManagement.kontaktyDataSetTableAdapters {
     
     
     /// <summary>
@@ -4831,7 +4825,7 @@ namespace import.kontaktyDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::import.Properties.Settings.Default.OutlookAccessConnectionString;
+            this._connection.ConnectionString = Properties.Settings.Default.OutlookAccessConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

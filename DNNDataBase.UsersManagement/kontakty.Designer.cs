@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace import {
+namespace CAS.DNNDataBase.UsersManagement {
     
     
     /// <summary>
@@ -277,7 +277,7 @@ namespace import {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class osobaDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class osobaDataTable : global::System.Data.TypedTableBase<osobaRow> {
             
             private global::System.Data.DataColumn columnimie_i_nazwisko;
             
@@ -509,12 +509,6 @@ namespace import {
                 rowosobaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowosobaRow);
                 return rowosobaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public virtual global::System.Collections.IEnumerator GetEnumerator() {
-                return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -16,7 +16,7 @@
 using System;
 using System.Data;
 
-namespace import
+namespace CAS.DNNDataBase.UsersManagement
 {
 
   /// <summary>

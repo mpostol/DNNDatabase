@@ -1,4 +1,4 @@
-namespace import
+namespace CAS.DNNDataBase.UsersManagement
 {
   partial class FormImportTXTListSettings
   {
