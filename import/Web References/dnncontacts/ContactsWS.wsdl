@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org//SimpleService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org//SimpleService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org//SimpleService">
+      <s:element name="GetContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="wsmoduleid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContactsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDNNUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="wsmoduleid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDNNUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDNNUsersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Role" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wsmoduleid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateContactResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Approved" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cell" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WebSite" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wsmoduleid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContacts" />
+  </wsdl:message>
+  <wsdl:message name="GetContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDNNUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDNNUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetDNNUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDNNUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateContactSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateContact" />
+  </wsdl:message>
+  <wsdl:message name="CreateContactSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ContactsSoap">
+    <wsdl:operation name="GetContacts">
+      <wsdl:input message="tns:GetContactsSoapIn" />
+      <wsdl:output message="tns:GetContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDNNUsers">
+      <wsdl:input message="tns:GetDNNUsersSoapIn" />
+      <wsdl:output message="tns:GetDNNUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContact">
+      <wsdl:input message="tns:CreateContactSoapIn" />
+      <wsdl:output message="tns:CreateContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input message="tns:CreateUserSoapIn" />
+      <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ContactsSoap" type="tns:ContactsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContacts">
+      <soap:operation soapAction="http://tempuri.org//SimpleService/GetContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDNNUsers">
+      <soap:operation soapAction="http://tempuri.org//SimpleService/GetDNNUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContact">
+      <soap:operation soapAction="http://tempuri.org//SimpleService/CreateContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org//SimpleService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ContactsSoap12" type="tns:ContactsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContacts">
+      <soap12:operation soapAction="http://tempuri.org//SimpleService/GetContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDNNUsers">
+      <soap12:operation soapAction="http://tempuri.org//SimpleService/GetDNNUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContact">
+      <soap12:operation soapAction="http://tempuri.org//SimpleService/CreateContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://tempuri.org//SimpleService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Contacts">
+    <wsdl:port name="ContactsSoap" binding="tns:ContactsSoap">
+      <soap:address location="http://192.168.0.100/dnn/DesktopModules/OnyakTech.Contacts.WS/ContactsWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ContactsSoap12" binding="tns:ContactsSoap12">
+      <soap12:address location="http://192.168.0.100/dnn/DesktopModules/OnyakTech.Contacts.WS/ContactsWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E204F3B4-F9EE-4F04-B235-7BD158A759D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>import</RootNamespace>
+    <AssemblyName>import</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/import/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseDNNDataSet.cs">
+      <DependentUpon>DatabaseDNNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDNNDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDNNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportDNNRegisteredUsersSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportDNNRegisteredUsersSettings.Designer.cs">
+      <DependentUpon>FormImportDNNRegisteredUsersSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportOutlookSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportOutlookSettings.Designer.cs">
+      <DependentUpon>FormImportOutlookSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportStatystykiSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportStatystykiSettings.Designer.cs">
+      <DependentUpon>FormImportStatystykiSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportTXTListSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportTXTListSettings.Designer.cs">
+      <DependentUpon>FormImportTXTListSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kontakty.cs">
+      <DependentUpon>kontakty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontakty.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kontakty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontaktycsv.cs">
+      <DependentUpon>kontaktycsv.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontaktycsv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kontaktycsv.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontaktyDataSet.cs">
+      <DependentUpon>kontaktyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontaktyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kontaktyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormImportDNNRegisteredUsersSettings.resx">
+      <DependentUpon>FormImportDNNRegisteredUsersSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportOutlookSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormImportOutlookSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportStatystykiSettings.resx">
+      <DependentUpon>FormImportStatystykiSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportTXTListSettings.resx">
+      <DependentUpon>FormImportTXTListSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="kontakty.xsc">
+      <DependentUpon>kontakty.xsd</DependentUpon>
+    </None>
+    <None Include="kontakty.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kontakty.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="kontakty.xss">
+      <DependentUpon>kontakty.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\dnncontacts\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.0.100/dnn/DesktopModules/OnyakTech.Contacts.WS/ContactsWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\dnncontacts\</RelPath>
+      <UpdateFromURL>http://192.168.0.100/dnn/DesktopModules/OnyakTech.Contacts.WS/ContactsWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>import_dnncontacts_Contacts</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseDNNDataSet.xsc">
+      <DependentUpon>DatabaseDNNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDNNDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDNNDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDNNDataSet.xss">
+      <DependentUpon>DatabaseDNNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kontaktycsv.xsc">
+      <DependentUpon>kontaktycsv.xsd</DependentUpon>
+    </None>
+    <None Include="kontaktycsv.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kontaktycsv.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="kontaktycsv.xss">
+      <DependentUpon>kontaktycsv.xsd</DependentUpon>
+    </None>
+    <None Include="kontaktyDataSet.xsc">
+      <DependentUpon>kontaktyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kontaktyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kontaktyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kontaktyDataSet.xss">
+      <DependentUpon>kontaktyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\dnncontacts\ContactsWS.disco" />
+    <None Include="Web References\dnncontacts\ContactsWS.wsdl" />
+    <None Include="Web References\dnncontacts\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
