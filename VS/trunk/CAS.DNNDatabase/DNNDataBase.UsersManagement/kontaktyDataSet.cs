@@ -15,7 +15,7 @@
 //  mailto:techsupp@cas.com.pl
 //  http://www.cas.eu
 //</summary>
-namespace import
+namespace CAS.DNNDataBase.UsersManagement
 {
 
 

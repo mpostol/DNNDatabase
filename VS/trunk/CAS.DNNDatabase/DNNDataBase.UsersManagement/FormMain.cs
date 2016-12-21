@@ -18,8 +18,9 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.Text;
+using CAS.DNNDataBase.UsersManagement.Properties;
 
-namespace import
+namespace CAS.DNNDataBase.UsersManagement
 {
   public partial class FormMain : Form
   {
@@ -433,7 +434,7 @@ namespace import
           if (campaign_id < 0)
             throw new Exception("Kampanii nie znaleziono");
           //robimy wlasciwy import
-          foreach (import.kontaktyDataSet.KontaktyRow row in kontaktyDataSet.Kontakty)
+          foreach (kontaktyDataSet.KontaktyRow row in kontaktyDataSet.Kontakty)
             if (row.Match(settings.textBox_kraj.Text, settings.textBox_kategoria.Text, settings.checkBox_innyniz.Checked))
               databaseDNNDataSet.dnn1_OnyakNEOptIns.UpdateOrAddEntry(campaign_id, row.Adresemail, row.GetImie(), row.GetNazwisko());
           dnn1_OnyakNEOptInsTableAdapter.Update(databaseDNNDataSet.dnn1_OnyakNEOptIns);
@@ -448,20 +449,20 @@ namespace import
     {
       try
       {
-        FormImportStatystykiSettings settings = new FormImportStatystykiSettings();
-        settings.ShowDialog();
-        if (!settings.ok)
+        FormImportStatystykiSettings _settings = new FormImportStatystykiSettings();
+        _settings.ShowDialog();
+        if (!_settings.ok)
           return;
         //wyszukujemy wlasciwa kampanie
-        int campaign_id = databaseDNNDataSet.dnn1_OnyakNECampaign.FindId(settings.textBox_kampania.Text);
+        int campaign_id = databaseDNNDataSet.dnn1_OnyakNECampaign.FindId(_settings.textBox_kampania.Text);
         if (campaign_id < 0)
         {
           MessageBox.Show($"The campain {_settings.textBox_kampania.Text} doesn't exist.");
           return;
         }
         //robimy wlasciwy import
-        foreach (import.kontakty.osobaRow row in kontakty.osoba)
-          if (row.Match(settings.textBox_kraj.Text))
+        foreach (kontakty.osobaRow row in kontakty.osoba)
+          if (row.Match(_settings.textBox_kraj.Text))
             databaseDNNDataSet.dnn1_OnyakNEOptIns.UpdateOrAddEntry(campaign_id, row.email, row.GetImie(), row.GetNazwisko());
         dnn1_OnyakNEOptInsTableAdapter.Update(databaseDNNDataSet.dnn1_OnyakNEOptIns);
       }
@@ -478,44 +479,43 @@ namespace import
     {
       try
       {
-        FormImportTXTListSettings settings = new FormImportTXTListSettings();
-        settings.ShowDialog();
-        if (settings.ok)
+        FormImportTXTListSettings _settings = new FormImportTXTListSettings();
+        _settings.ShowDialog();
+        if (!_settings.ok)
+          return;
+        //wyszukujemy wlasciwa kampanie
+        int campaign_id = databaseDNNDataSet.dnn1_OnyakNECampaign.FindId(_settings.textBox_kampania.Text);
+        if (campaign_id < 0)
         {
-          //wyszukujemy wlasciwa kampanie
-          int campaign_id = databaseDNNDataSet.dnn1_OnyakNECampaign.FindId(settings.textBox_kampania.Text);
-          if (campaign_id < 0)
+          MessageBox.Show($"The campain {_settings.textBox_kampania.Text} doesn't exist.");
+          return;
+        }
+        //teraz otworzymy plik i dodamy wszystkie tagi:
+        StreamReader plik = new StreamReader(_settings.textBox_file.Text, System.Text.Encoding.Default);
+        string plikzawartosc = plik.ReadToEnd();
+        plik.Close();
+        string Tagname = "";
+        while (plikzawartosc.Length > 0)
+        {
+          int pos = plikzawartosc.IndexOf("\r\n");
+          if (pos >= 0)
           {
-            MessageBox.Show($"The campain {_settings.textBox_kampania.Text} doesn't exist.");
-            return;
+            Tagname = plikzawartosc.Substring(0, pos);
+            plikzawartosc = plikzawartosc.Remove(0, pos + 2);
           }
-          //teraz otworzymy plik i dodamy wszystkie tagi:
-          StreamReader plik = new StreamReader(settings.textBox_file.Text, System.Text.Encoding.Default);
-          string plikzawartosc = plik.ReadToEnd();
-          plik.Close();
-          string Tagname = "";
-          while (plikzawartosc.Length > 0)
+          else
           {
-            int pos = plikzawartosc.IndexOf("\r\n");
-            if (pos >= 0)
+            if (plikzawartosc.Length > 0)
             {
-              Tagname = plikzawartosc.Substring(0, pos);
-              plikzawartosc = plikzawartosc.Remove(0, pos + 2);
+              Tagname = plikzawartosc;
+              plikzawartosc = "";
             }
-            else
-            {
-              if (plikzawartosc.Length > 0)
-              {
-                Tagname = plikzawartosc;
-                plikzawartosc = "";
-              }
-            }
-            Tagname = Tagname.Trim();
-            if (Tagname.Length > 0) //only if the line is not empty
-            {
-              //dodajemy taga:
-              databaseDNNDataSet.dnn1_OnyakNEOptIns.UpdateOrAddEntry(campaign_id, Tagname, "", "");
-            }
+          }
+          Tagname = Tagname.Trim();
+          if (Tagname.Length > 0) //only if the line is not empty
+          {
+            //dodajemy taga:
+            databaseDNNDataSet.dnn1_OnyakNEOptIns.UpdateOrAddEntry(campaign_id, Tagname, "", "");
           }
         }
         dnn1_OnyakNEOptInsTableAdapter.Update(databaseDNNDataSet.dnn1_OnyakNEOptIns);
@@ -615,7 +615,7 @@ namespace import
           }
         }
         dnn1_OnyakNEOptInsTableAdapter.Update(databaseDNNDataSet.dnn1_OnyakNEOptIns);
-        MessageBox.Show($"Number of unsubscribed items: {_count}", "CCampaigns);
+        MessageBox.Show($"Number of unsubscribed items: {_count}", "Campaigns");
       }
       catch (Exception ex)
       {

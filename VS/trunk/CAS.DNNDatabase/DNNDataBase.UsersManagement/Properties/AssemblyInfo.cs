@@ -1,33 +1,33 @@
-﻿using System.Reflection;
+﻿//_______________________________________________________________
+//  Title   :  Assembly info for: CAS.DNNDataBase.UsersManagement
+//  System  : Microsoft VisualStudio 2015 / C#
+//  $LastChangedDate$
+//  $Rev$
+//  $LastChangedBy$
+//  $URL$
+//  $Id$
+//
+//  Copyright (c) 2000-2016 CAS LODZ POLAND
+//  +48 (42) 686 25 47
+//  techsupp@cas.eu
+//  www.cas.eu
+//_______________________________________________________________
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("import")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("CAS.DNNDataBase.UsersManagement")]
+[assembly: AssemblyDescription("CAS DNN Users Database Management Application")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("import")]
-[assembly: AssemblyCopyright("Copyright ©  2007")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("CAS")]
+[assembly: AssemblyProduct("CAS Framework Core")]
+[assembly: AssemblyCopyright("Copyright (c) 2000-2016 CAS LODZ POLAND")]
+[assembly: AssemblyTrademark("CAS Framework")]
 [assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("c54a8671-c7f9-4b2d-9344-a3f4df247239")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyVersion("2.00.00.*")]
+[assembly: AssemblyFileVersion("2.00.00")]
 
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+

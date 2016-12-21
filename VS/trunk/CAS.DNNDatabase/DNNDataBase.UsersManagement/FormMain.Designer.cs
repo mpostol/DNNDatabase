@@ -1,33 +1,33 @@
-namespace import
+namespace CAS.DNNDataBase.UsersManagement
 {
-    partial class FormMain
+  partial class FormMain
+  {
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+      if (disposing && (components != null))
+      {
+        components.Dispose();
+      }
+      base.Dispose(disposing);
+    }
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+    #region Windows Form Designer generated code
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
       this.components = new System.ComponentModel.Container();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -46,7 +46,7 @@ namespace import
       this.faxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.wiadomoscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.osobaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.kontakty = new import.kontakty();
+      this.kontakty = new CAS.DNNDataBase.UsersManagement.kontakty();
       this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
       this.splitContainer1 = new System.Windows.Forms.SplitContainer();
       this.buttonPlikBazy = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@ namespace import
       this.adresEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.kategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.osobycsv1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.kontaktycsv = new import.kontaktycsv();
+      this.kontaktycsv = new CAS.DNNDataBase.UsersManagement.kontaktycsv();
       this.dataGridView2 = new System.Windows.Forms.DataGridView();
       this.tabPage_AccessOutlookAttach = new System.Windows.Forms.TabPage();
       this.dataGridView_outlook_access = new System.Windows.Forms.DataGridView();
@@ -161,7 +161,7 @@ namespace import
       this.zawódDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.kontaktyBindingSource = new System.Windows.Forms.BindingSource(this.components);
       this.bindingSource_outlookaccessattach = new System.Windows.Forms.BindingSource(this.components);
-      this.kontaktyDataSet = new import.kontaktyDataSet();
+      this.kontaktyDataSet = new CAS.DNNDataBase.UsersManagement.kontaktyDataSet();
       this.tabPage_DNNAttach = new System.Windows.Forms.TabPage();
       this.button_save = new System.Windows.Forms.Button();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -202,7 +202,7 @@ namespace import
       this.currentReadsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.dnn1OnyakNECampaignBindingSource = new System.Windows.Forms.BindingSource(this.components);
       this.bindingSource_DNNAttach = new System.Windows.Forms.BindingSource(this.components);
-      this.databaseDNNDataSet = new import.DatabaseDNNDataSet();
+      this.databaseDNNDataSet = new CAS.DNNDataBase.UsersManagement.DatabaseDNNDataSet();
       this.dataGridView5 = new System.Windows.Forms.DataGridView();
       this.optInsSystemIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.campaignSystemIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -238,19 +238,21 @@ namespace import
       this.changeOutlookAttachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.othersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.unsubscribeTXTListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.dnn1_OnyakNECampaignTableAdapter = new import.DatabaseDNNDataSetTableAdapters.dnn1_OnyakNECampaignTableAdapter();
-      this.dnn1_OnyakNEOptInsTableAdapter = new import.DatabaseDNNDataSetTableAdapters.dnn1_OnyakNEOptInsTableAdapter();
-      this.kontaktyTableAdapter = new import.kontaktyDataSetTableAdapters.KontaktyTableAdapter();
-      this.dNNRegisteredUsersTableAdapter = new import.DatabaseDNNDataSetTableAdapters.DNNRegisteredUsersTableAdapter();
+      this.dnn1_OnyakNECampaignTableAdapter = new CAS.DNNDataBase.UsersManagement.DatabaseDNNDataSetTableAdapters.dnn1_OnyakNECampaignTableAdapter();
+      this.dnn1_OnyakNEOptInsTableAdapter = new CAS.DNNDataBase.UsersManagement.DatabaseDNNDataSetTableAdapters.dnn1_OnyakNEOptInsTableAdapter();
+      this.kontaktyTableAdapter = new CAS.DNNDataBase.UsersManagement.kontaktyDataSetTableAdapters.KontaktyTableAdapter();
+      this.dNNRegisteredUsersTableAdapter = new CAS.DNNDataBase.UsersManagement.DatabaseDNNDataSetTableAdapters.DNNRegisteredUsersTableAdapter();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.osobaBindingSource)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.kontakty)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
       this.splitContainer1.Panel1.SuspendLayout();
       this.splitContainer1.Panel2.SuspendLayout();
       this.splitContainer1.SuspendLayout();
       this.tabControlXML_CSV.SuspendLayout();
       this.tabPageXML.SuspendLayout();
       this.tabPageCSV.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
       this.splitContainer2.Panel1.SuspendLayout();
       this.splitContainer2.Panel2.SuspendLayout();
       this.splitContainer2.SuspendLayout();
@@ -303,7 +305,7 @@ namespace import
       this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.dataGridView1.Location = new System.Drawing.Point(0, 0);
       this.dataGridView1.Name = "dataGridView1";
-      this.dataGridView1.Size = new System.Drawing.Size(879, 522);
+      this.dataGridView1.Size = new System.Drawing.Size(1031, 522);
       this.dataGridView1.TabIndex = 0;
       // 
       // emailDataGridViewTextBoxColumn
@@ -417,13 +419,13 @@ namespace import
       // splitContainer1.Panel2
       // 
       this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-      this.splitContainer1.Size = new System.Drawing.Size(879, 590);
+      this.splitContainer1.Size = new System.Drawing.Size(1031, 590);
       this.splitContainer1.SplitterDistance = 64;
       this.splitContainer1.TabIndex = 1;
       // 
       // buttonPlikBazy
       // 
-      this.buttonPlikBazy.Location = new System.Drawing.Point(338, 3);
+      this.buttonPlikBazy.Location = new System.Drawing.Point(246, 3);
       this.buttonPlikBazy.Name = "buttonPlikBazy";
       this.buttonPlikBazy.Size = new System.Drawing.Size(97, 23);
       this.buttonPlikBazy.TabIndex = 3;
@@ -473,7 +475,7 @@ namespace import
       this.tabControlXML_CSV.Location = new System.Drawing.Point(12, 27);
       this.tabControlXML_CSV.Name = "tabControlXML_CSV";
       this.tabControlXML_CSV.SelectedIndex = 0;
-      this.tabControlXML_CSV.Size = new System.Drawing.Size(893, 622);
+      this.tabControlXML_CSV.Size = new System.Drawing.Size(1045, 622);
       this.tabControlXML_CSV.TabIndex = 2;
       // 
       // tabPageXML
@@ -482,7 +484,7 @@ namespace import
       this.tabPageXML.Location = new System.Drawing.Point(4, 22);
       this.tabPageXML.Name = "tabPageXML";
       this.tabPageXML.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPageXML.Size = new System.Drawing.Size(885, 596);
+      this.tabPageXML.Size = new System.Drawing.Size(1037, 596);
       this.tabPageXML.TabIndex = 0;
       this.tabPageXML.Text = "XML";
       this.tabPageXML.UseVisualStyleBackColor = true;
@@ -1780,7 +1782,7 @@ namespace import
             this.othersToolStripMenuItem});
       this.menuStrip_mainform.Location = new System.Drawing.Point(0, 0);
       this.menuStrip_mainform.Name = "menuStrip_mainform";
-      this.menuStrip_mainform.Size = new System.Drawing.Size(917, 24);
+      this.menuStrip_mainform.Size = new System.Drawing.Size(1069, 24);
       this.menuStrip_mainform.TabIndex = 3;
       this.menuStrip_mainform.Text = "menuStrip1";
       // 
@@ -1888,7 +1890,7 @@ namespace import
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(917, 661);
+      this.ClientSize = new System.Drawing.Size(1069, 661);
       this.Controls.Add(this.tabControlXML_CSV);
       this.Controls.Add(this.menuStrip_mainform);
       this.Name = "FormMain";
@@ -1899,12 +1901,14 @@ namespace import
       ((System.ComponentModel.ISupportInitialize)(this.kontakty)).EndInit();
       this.splitContainer1.Panel1.ResumeLayout(false);
       this.splitContainer1.Panel2.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
       this.splitContainer1.ResumeLayout(false);
       this.tabControlXML_CSV.ResumeLayout(false);
       this.tabPageXML.ResumeLayout(false);
       this.tabPageCSV.ResumeLayout(false);
       this.splitContainer2.Panel1.ResumeLayout(false);
       this.splitContainer2.Panel2.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
       this.splitContainer2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.osobycsv1BindingSource)).EndInit();
@@ -1930,229 +1934,224 @@ namespace import
       this.ResumeLayout(false);
       this.PerformLayout();
 
-        }
-
-        #endregion
-
-        private kontakty kontakty;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button buttonOpenXML;
-        private System.Windows.Forms.Button buttonSaveXML;
-        private System.Windows.Forms.Button buttonCleanXML;
-        private System.Windows.Forms.BindingSource osobaBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn metodakomunikacjiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn langDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wouldliketoreceiveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imieinazwiskoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firmaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn miastoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn krajDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zIPcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn faxDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wiadomoscDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonPlikBazy;
-        private System.Windows.Forms.TabControl tabControlXML_CSV;
-        private System.Windows.Forms.TabPage tabPageXML;
-        private System.Windows.Forms.TabPage tabPageCSV;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button buttonGenerujCSV;
-        private System.Windows.Forms.Button buttonOpenCSV;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imiêDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresEmail2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresEmail3DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jêzykDataGridViewTextBoxColumn;
-        private kontaktycsv kontaktycsv;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresEmailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource osobycsv1BindingSource;
-        private System.Windows.Forms.Button buttonOpenTXT;
-        private System.Windows.Forms.Button buttonGenerujTXT;
-      private System.Windows.Forms.TabPage tabPage_DNNAttach;
-      private System.Windows.Forms.MenuStrip menuStrip_mainform;
-      private System.Windows.Forms.ToolStripMenuItem synchroToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem xMLDNNToolStripMenuItem;
-      private System.Windows.Forms.BindingSource bindingSource_DNNAttach;
-      private DatabaseDNNDataSet databaseDNNDataSet;
-      private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-      private System.Windows.Forms.DataGridView dataGridView4;
-      private System.Windows.Forms.BindingSource dnn1OnyakNECampaignBindingSource;
-      private import.DatabaseDNNDataSetTableAdapters.dnn1_OnyakNECampaignTableAdapter dnn1_OnyakNECampaignTableAdapter;
-      private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn createdByDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendOnceDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn sendOnceDateDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendWeeklyDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendMonthlyDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendDailyDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendYearlyDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn bodyContentDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn campaignSystemIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dynamicContentSystemIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn surveysSystemIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn runsDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn lastRunDateDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendOpInDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendRolesDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn sendFixedDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn rolesListDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn fixedListDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn optInsSystemIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn sendDayOfMonthDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn sendDayOfYearDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn enabledDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn customToListDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn globalRolesDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn sendFromDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn portalIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn moduleIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn batchLimitDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn enablePersonalizatonDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn currentReadsDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridView dataGridView5;
-      private System.Windows.Forms.BindingSource dnn1OnyakNEOptInsBindingSource;
-      private import.DatabaseDNNDataSetTableAdapters.dnn1_OnyakNEOptInsTableAdapter dnn1_OnyakNEOptInsTableAdapter;
-      private System.Windows.Forms.DataGridViewTextBoxColumn optInsSystemIDDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn campaignSystemIDDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn enabledDataGridViewCheckBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn createdDateDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn disabledDateDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-      private System.Windows.Forms.TabPage tabPage_AccessOutlookAttach;
-      private System.Windows.Forms.BindingSource bindingSource_outlookaccessattach;
-      private kontaktyDataSet kontaktyDataSet;
-      private System.Windows.Forms.DataGridView dataGridView_outlook_access;
-      private System.Windows.Forms.BindingSource kontaktyBindingSource;
-      private import.kontaktyDataSetTableAdapters.KontaktyTableAdapter kontaktyTableAdapter;
-      private System.Windows.Forms.DataGridViewTextBoxColumn tytuDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn drugieimiêDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-      private System.Windows.Forms.DataGridViewTextBoxColumn sufiksDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn firmaDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dziaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn stanowiskoDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowyulicaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowyulica2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowyulica3DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowymiejscowoæDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowywojewództwoDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowykodpocztowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adressubowykrajDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowyulicaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowyulica2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowyulica3DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowymiejscowoæDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowywojewództwoDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowykodpocztowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowykrajDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadresulicaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadresulica2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadresulica3DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadresmiejscowoæDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadreswojewództwoDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadreskodpocztowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyadreskrajDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonasystentaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn fakssubowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonsubowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonsubowy2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn wywoaniezwrotneDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonwsamochodzieDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn gównytelefondofirmyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn faksdomowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefondomowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefondomowy2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn iSDNDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonkomórkowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innyfaksDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn innytelefonDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn pagerDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonpodstawowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn radiotelefonDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn telefonTTYTDDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn teleksDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn adresemailDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn typemailDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn wywietlananazwaemailDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-      private System.Windows.Forms.DataGridViewTextBoxColumn rodzajemail2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn wywietlananazwaemail2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-      private System.Windows.Forms.DataGridViewTextBoxColumn rodzajemail3DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn wywietlananazwaemail3DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn charakterinformacjiDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dzieciDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn hobbyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn imiêinazwiskoasystentaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn informacjerozliczenioweDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn inicjayDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn internetoweinformacjewolnyzajêtyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-      private System.Windows.Forms.DataGridViewTextBoxColumn kategorieDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn kontoDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn lokalizacjaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn lokalizacjabiuraDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn menederDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn notatkiDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn numerewidencyjnyworganizacjiDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn osobapolecajcaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn pESELDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn peæDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn priorytetDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn prywatneDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn przebiegDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn rocznicaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn serweradresowyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn skrytkapocztowaDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn sowakluczoweDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn stronasieciWebDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn urodzinyDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik1DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik2DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik3DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik4DataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn wspómaonekDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn zawódDataGridViewTextBoxColumn;
-      private System.Windows.Forms.ToolStripMenuItem outlookAccessDNNToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem tXTListDNNToolStripMenuItem;
-      private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-      private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem changeOutlookAttachToolStripMenuItem;
-      private System.Windows.Forms.Button button_save;
-      private System.Windows.Forms.DataGridView dataGridView6;
-      private System.Windows.Forms.BindingSource dNNRegisteredUsersBindingSource;
-      private import.DatabaseDNNDataSetTableAdapters.DNNRegisteredUsersTableAdapter dNNRegisteredUsersTableAdapter;
-      private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn1;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn isSuperUserDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn affiliateIdDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn2;
-      private System.Windows.Forms.DataGridViewTextBoxColumn displayNameDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewCheckBoxColumn updatePasswordDataGridViewCheckBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn propertyValueDataGridViewTextBoxColumn;
-      private System.Windows.Forms.DataGridViewTextBoxColumn propertyDefinitionIDDataGridViewTextBoxColumn;
-      private System.Windows.Forms.ToolStripMenuItem dNNRegisteredUsersDNNToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem othersToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem unsubscribeTXTListToolStripMenuItem;
-
     }
+
+    #endregion
+
+    private kontakty kontakty;
+    private System.Windows.Forms.OpenFileDialog openFileDialog1;
+    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+    private System.Windows.Forms.SplitContainer splitContainer1;
+    private System.Windows.Forms.Button buttonOpenXML;
+    private System.Windows.Forms.Button buttonSaveXML;
+    private System.Windows.Forms.Button buttonCleanXML;
+    private System.Windows.Forms.BindingSource osobaBindingSource;
+    private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn metodakomunikacjiDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn langDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wouldliketoreceiveDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn imieinazwiskoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn firmaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn miastoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn stanDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn krajDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn zIPcodeDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn faxDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wiadomoscDataGridViewTextBoxColumn;
+    private System.Windows.Forms.Button buttonPlikBazy;
+    private System.Windows.Forms.TabControl tabControlXML_CSV;
+    private System.Windows.Forms.TabPage tabPageXML;
+    private System.Windows.Forms.TabPage tabPageCSV;
+    private System.Windows.Forms.SplitContainer splitContainer2;
+    private System.Windows.Forms.Button buttonGenerujCSV;
+    private System.Windows.Forms.Button buttonOpenCSV;
+    private System.Windows.Forms.DataGridView dataGridView2;
+    private kontaktycsv kontaktycsv;
+    private System.Windows.Forms.DataGridView dataGridView3;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresEmailDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn kategoriaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.BindingSource osobycsv1BindingSource;
+    private System.Windows.Forms.Button buttonOpenTXT;
+    private System.Windows.Forms.Button buttonGenerujTXT;
+    private System.Windows.Forms.TabPage tabPage_DNNAttach;
+    private System.Windows.Forms.MenuStrip menuStrip_mainform;
+    private System.Windows.Forms.ToolStripMenuItem synchroToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem xMLDNNToolStripMenuItem;
+    private System.Windows.Forms.BindingSource bindingSource_DNNAttach;
+    private DatabaseDNNDataSet databaseDNNDataSet;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+    private System.Windows.Forms.DataGridView dataGridView4;
+    private System.Windows.Forms.BindingSource dnn1OnyakNECampaignBindingSource;
+    private DatabaseDNNDataSetTableAdapters.dnn1_OnyakNECampaignTableAdapter dnn1_OnyakNECampaignTableAdapter;
+    private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn createdByDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendOnceDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn sendOnceDateDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendWeeklyDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendMonthlyDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendDailyDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendYearlyDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn bodyContentDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn campaignSystemIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dynamicContentSystemIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn surveysSystemIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn runsDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn lastRunDateDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendOpInDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendRolesDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn sendFixedDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn rolesListDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn fixedListDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn optInsSystemIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn sendDayOfMonthDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn sendDayOfYearDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn enabledDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn customToListDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn globalRolesDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn sendFromDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn portalIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn moduleIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn batchLimitDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn enablePersonalizatonDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn currentReadsDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridView dataGridView5;
+    private System.Windows.Forms.BindingSource dnn1OnyakNEOptInsBindingSource;
+    private DatabaseDNNDataSetTableAdapters.dnn1_OnyakNEOptInsTableAdapter dnn1_OnyakNEOptInsTableAdapter;
+    private System.Windows.Forms.DataGridViewTextBoxColumn optInsSystemIDDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn campaignSystemIDDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn enabledDataGridViewCheckBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn createdDateDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn disabledDateDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+    private System.Windows.Forms.TabPage tabPage_AccessOutlookAttach;
+    private System.Windows.Forms.BindingSource bindingSource_outlookaccessattach;
+    private kontaktyDataSet kontaktyDataSet;
+    private System.Windows.Forms.DataGridView dataGridView_outlook_access;
+    private System.Windows.Forms.BindingSource kontaktyBindingSource;
+    private kontaktyDataSetTableAdapters.KontaktyTableAdapter kontaktyTableAdapter;
+    private System.Windows.Forms.DataGridViewTextBoxColumn tytuDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn drugieimiêDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+    private System.Windows.Forms.DataGridViewTextBoxColumn sufiksDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn firmaDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dziaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn stanowiskoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowyulicaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowyulica2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowyulica3DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowymiejscowoæDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowywojewództwoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowykodpocztowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adressubowykrajDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowyulicaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowyulica2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowyulica3DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowymiejscowoæDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowywojewództwoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowykodpocztowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresdomowykrajDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadresulicaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadresulica2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadresulica3DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadresmiejscowoæDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadreswojewództwoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadreskodpocztowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyadreskrajDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonasystentaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn fakssubowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonsubowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonsubowy2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wywoaniezwrotneDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonwsamochodzieDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn gównytelefondofirmyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn faksdomowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefondomowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefondomowy2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn iSDNDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonkomórkowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innyfaksDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn innytelefonDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn pagerDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonpodstawowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn radiotelefonDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn telefonTTYTDDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn teleksDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn adresemailDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn typemailDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wywietlananazwaemailDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+    private System.Windows.Forms.DataGridViewTextBoxColumn rodzajemail2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wywietlananazwaemail2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+    private System.Windows.Forms.DataGridViewTextBoxColumn rodzajemail3DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wywietlananazwaemail3DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn charakterinformacjiDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dzieciDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn hobbyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn imiêinazwiskoasystentaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn informacjerozliczenioweDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn inicjayDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn internetoweinformacjewolnyzajêtyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+    private System.Windows.Forms.DataGridViewTextBoxColumn kategorieDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn kontoDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn lokalizacjaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn lokalizacjabiuraDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn menederDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn notatkiDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn numerewidencyjnyworganizacjiDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn osobapolecajcaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn pESELDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn peæDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn priorytetDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn prywatneDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn przebiegDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn rocznicaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn serweradresowyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn skrytkapocztowaDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn sowakluczoweDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn stronasieciWebDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn urodzinyDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik1DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik2DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik3DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn uytkownik4DataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn wspómaonekDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn zawódDataGridViewTextBoxColumn;
+    private System.Windows.Forms.ToolStripMenuItem outlookAccessDNNToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem tXTListDNNToolStripMenuItem;
+    private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+    private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem changeOutlookAttachToolStripMenuItem;
+    private System.Windows.Forms.Button button_save;
+    private System.Windows.Forms.DataGridView dataGridView6;
+    private System.Windows.Forms.BindingSource dNNRegisteredUsersBindingSource;
+    private DatabaseDNNDataSetTableAdapters.DNNRegisteredUsersTableAdapter dNNRegisteredUsersTableAdapter;
+    private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn isSuperUserDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn affiliateIdDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn2;
+    private System.Windows.Forms.DataGridViewTextBoxColumn displayNameDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn updatePasswordDataGridViewCheckBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn propertyValueDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn propertyDefinitionIDDataGridViewTextBoxColumn;
+    private System.Windows.Forms.ToolStripMenuItem dNNRegisteredUsersDNNToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem othersToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem unsubscribeTXTListToolStripMenuItem;
+
+  }
 }
 

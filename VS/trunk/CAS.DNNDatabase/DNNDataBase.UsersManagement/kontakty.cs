@@ -19,7 +19,7 @@
 using System.Data;
 using System.Text.RegularExpressions;
 
-namespace import
+namespace CAS.DNNDataBase.UsersManagement
 {
 
 
