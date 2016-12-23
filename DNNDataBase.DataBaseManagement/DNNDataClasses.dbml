@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="intranetdnn" Class="DNNDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CAS_06\SQLEXPRESS;Initial Catalog=intranetdnn;Persist Security Info=True;User ID=sa" SettingsObjectName="CAS.DNNDataBase.DataBaseManagement.Properties.Settings" SettingsPropertyName="intranetdnnConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dnn1_UserAuthentication" Member="dnn1_UserAuthentications">
+    <Type Name="dnn1_UserAuthentication">
+      <Column Name="UserAuthenticationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AuthenticationType" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AuthenticationToken" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="dnn1_User_dnn1_UserAuthentication" Member="dnn1_User" ThisKey="UserID" OtherKey="UserID" Type="dnn1_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Users" Member="dnn1_Users">
+    <Type Name="dnn1_User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSuperUser" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AffiliateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatePassword" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastIPAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="dnn1_User_dnn1_UserAuthentication" Member="dnn1_UserAuthentications" ThisKey="UserID" OtherKey="UserID" Type="dnn1_UserAuthentication" />
+      <Association Name="dnn1_User_dnn1_UserPortal" Member="dnn1_UserPortals" ThisKey="UserID" OtherKey="UserId" Type="dnn1_UserPortal" />
+      <Association Name="dnn1_User_dnn1_UserProfile" Member="dnn1_UserProfiles" ThisKey="UserID" OtherKey="UserID" Type="dnn1_UserProfile" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_UserPortals" Member="dnn1_UserPortals">
+    <Type Name="dnn1_UserPortal">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PortalId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserPortalId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Authorised" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RefreshRoles" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="dnn1_User_dnn1_UserPortal" Member="dnn1_User" ThisKey="UserId" OtherKey="UserID" Type="dnn1_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_UserProfile" Member="dnn1_UserProfiles">
+    <Type Name="dnn1_UserProfile">
+      <Column Name="ProfileID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyDefinitionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyValue" Type="System.String" DbType="NVarChar(3750)" CanBeNull="true" />
+      <Column Name="PropertyText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Visibility" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="dnn1_User_dnn1_UserProfile" Member="dnn1_User" ThisKey="UserID" OtherKey="UserID" Type="dnn1_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
