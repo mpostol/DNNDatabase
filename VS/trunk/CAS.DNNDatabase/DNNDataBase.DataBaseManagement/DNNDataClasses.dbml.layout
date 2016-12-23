@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.625" name="DNNDataClasses">
+  <DataContextMoniker Name="/DNNDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2c26a42f-247e-48e8-8877-64da0a7afc8a" absoluteBounds="3.5, 1.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DNNDataClassesDataContext/dnn1_UserAuthentication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1bc96bf-9527-47d7-b9d5-1c6a0f40206b" absoluteBounds="3.5150000000000006, 1.7100000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eeb8f1f0-bd9c-4ad1-8726-aa7e9f35ac42" absoluteBounds="0.75, 3.5, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/DNNDataClassesDataContext/dnn1_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1b3aa1e-8e11-4055-9050-e7270e2161b5" absoluteBounds="0.76499999999999968, 3.9600000000000009, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 3.5); (1.75 : 2.3749995); (3.5 : 2.3749995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DNNDataClassesDataContext/dnn1_User/dnn1_User_dnn1_UserAuthentication" />
+      <nodes>
+        <classShapeMoniker Id="eeb8f1f0-bd9c-4ad1-8726-aa7e9f35ac42" />
+        <classShapeMoniker Id="2c26a42f-247e-48e8-8877-64da0a7afc8a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1ff52060-8eb8-42e8-abde-7bbb3c5928cd" absoluteBounds="3.5, 4.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DNNDataClassesDataContext/dnn1_UserPortal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22d60070-ad36-484d-9df9-9cdbd830dc10" absoluteBounds="3.5149999999999997, 4.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.45274983723958); (3.5 : 5.45274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DNNDataClassesDataContext/dnn1_User/dnn1_User_dnn1_UserPortal" />
+      <nodes>
+        <classShapeMoniker Id="eeb8f1f0-bd9c-4ad1-8726-aa7e9f35ac42" />
+        <classShapeMoniker Id="1ff52060-8eb8-42e8-abde-7bbb3c5928cd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f5a08318-ac41-4993-b9bf-e422b0d9725d" absoluteBounds="3.5, 7.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DNNDataClassesDataContext/dnn1_UserProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffbe4147-e03a-42b0-9e74-e3cab4ba0809" absoluteBounds="3.5149999999999997, 7.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 7.1939111328125); (1.75 : 8.32774983723958); (3.5 : 8.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DNNDataClassesDataContext/dnn1_User/dnn1_User_dnn1_UserProfile" />
+      <nodes>
+        <classShapeMoniker Id="eeb8f1f0-bd9c-4ad1-8726-aa7e9f35ac42" />
+        <classShapeMoniker Id="f5a08318-ac41-4993-b9bf-e422b0d9725d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
