@@ -14,13 +14,14 @@
 //_______________________________________________________________
 
 using CAS.DNNDataBase.DataBaseManagement;
+using CAS.DNNDataBase.ExportData.Properties;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Xml;
 
 namespace CAS.DNNDataBase.ExportData
 {
@@ -30,20 +31,24 @@ namespace CAS.DNNDataBase.ExportData
     public static void Main(string[] args)
     {
       Task<IEnumerable<DNNDataClassesDataContext.UserEmail>> _listOfEmailsTask = null;
+      string[] _commandLine = Environment.GetCommandLineArgs();
       try
       {
-        DateTime _startDate = DateTime.ParseExact("161116", m_DateFormat, System.Globalization.CultureInfo.InvariantCulture);
+        CommandLineCommands _commandToDo = CommandLineCommands.GetCommands(_commandLine);
+        DateTime _startDate = DateTime.ParseExact(_commandToDo.CommandsList[CommandLineCommands.CommandsSet.CreateRecentEmailsList].Item2, Settings.Default.DateFormat, CultureInfo.InvariantCulture);
         _listOfEmailsTask = GetEmailAsync(_startDate);
         _listOfEmailsTask.Wait();
-        IEnumerable<string> _listOfEmails = _listOfEmailsTask.Result.Select<DNNDataClassesDataContext.UserEmail, string>(x => x.Email).FilterEmails( new Progress<int>());
+        IEnumerable<string> _listOfEmails = _listOfEmailsTask.Result.Select<DNNDataClassesDataContext.UserEmail, string>(x => x.Email).FilterEmails(new Progress<int>());
         string _finalList = String.Join<string>(";", _listOfEmails.ToArray<string>());
         Console.WriteLine();
         Console.WriteLine("Final list of emails:");
         Console.WriteLine(_finalList);
         Console.WriteLine();
-        string _fileName = $"{XmlConvert.ToString(DateTime.Today, m_DateFormat)}_adresy_strona_commserver.txt";
+        Settings.Default.LastDate = DateTime.Today.ToString(Settings.Default.DateFormat);
+        string _fileName = $"{Settings.Default.LastDate}_adresy_strona_commserver.txt";
         File.WriteAllText(_fileName, _finalList);
-        Console.WriteLine($"Final list of emails registered since {_startDate.ToString(m_DateFormat)} saved to file {_fileName}");
+        Console.WriteLine($"Final list of emails registered since {_startDate.ToString(Settings.Default.DateFormat)} saved to file {_fileName}");
+        Settings.Default.Save();
       }
       catch (AggregateException _ex)
       {
@@ -57,7 +62,6 @@ namespace CAS.DNNDataBase.ExportData
       Console.Write("Press enter to close the window:");
       Console.ReadLine();
     }
-    private readonly static string m_DateFormat = "yyMMdd";
     private static async Task<IEnumerable<DNNDataClassesDataContext.UserEmail>> GetEmailAsync(DateTime startDate)
     {
       Task<IEnumerable<DNNDataClassesDataContext.UserEmail>> _emails = DNNDataClassesDataContext.GetEmailAsync(startDate);
@@ -73,6 +77,30 @@ namespace CAS.DNNDataBase.ExportData
       public void Report(T value)
       {
         Console.WriteLine($"Filtered out {value} emails");
+      }
+    }
+    private class CommandLineCommands
+    {
+      internal Dictionary<CommandsSet, Tuple<CommandsSet, string>> CommandsList { get; private set; } = null;
+      private Tuple<CommandsSet, string>[] _defaultCommands = new Tuple<CommandsSet, string>[]
+        {
+          new Tuple<CommandsSet, string>(CommandsSet.CreateRecentEmailsList, Settings.Default.LastDate),
+          new Tuple<CommandsSet, string>(CommandsSet.AnalyzeLinks, String.Empty),
+        };
+      internal enum CommandsSet { CreateRecentEmailsList, AnalyzeLinks };
+      internal static CommandLineCommands GetCommands(string[] commandLine)
+      {
+        CommandLineCommands _ret = new CommandLineCommands();
+        foreach (string _arg in commandLine)
+          if (_arg.ToLower().StartsWith("/d"))
+            _ret.CommandsList[CommandsSet.CreateRecentEmailsList] = new Tuple<CommandsSet, string>(CommandsSet.CreateRecentEmailsList, _arg.Substring(2));
+          else if (_arg.ToLower().StartsWith("/l"))
+            _ret.CommandsList[CommandsSet.AnalyzeLinks] = new Tuple<CommandsSet, string>(CommandsSet.AnalyzeLinks, _arg.Substring(2));
+        return _ret;
+      }
+      private CommandLineCommands()
+      {
+        CommandsList = _defaultCommands.ToDictionary<Tuple<CommandsSet, string>, CommandsSet>(x => x.Item1);
       }
     }
   }
