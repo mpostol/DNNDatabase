@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.DataBaseManagem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.ExportData", "DNNDataBase.ExportData\DNNDataBase.ExportData.csproj", "{E1C573A3-D4BE-49A6-9564-6512A54DB9A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.Scripts", "DNNDataBase.Scripts\DNNDataBase.Scripts.csproj", "{9980473B-E30A-4DD9-91FC-15126D050E68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E1C573A3-D4BE-49A6-9564-6512A54DB9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1C573A3-D4BE-49A6-9564-6512A54DB9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1C573A3-D4BE-49A6-9564-6512A54DB9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9980473B-E30A-4DD9-91FC-15126D050E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9980473B-E30A-4DD9-91FC-15126D050E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9980473B-E30A-4DD9-91FC-15126D050E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9980473B-E30A-4DD9-91FC-15126D050E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
