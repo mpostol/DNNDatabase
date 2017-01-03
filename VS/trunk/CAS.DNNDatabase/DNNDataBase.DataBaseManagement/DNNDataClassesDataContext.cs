@@ -27,11 +27,28 @@ namespace CAS.DNNDataBase.DataBaseManagement
     /// </summary>
     public struct UserEmail
     {
+      /// <summary>
+      /// The user name
+      /// </summary>
       public string UserName;
-      public bool Registered;
+      /// <summary>
+      /// The last ip address
+      /// </summary>
+      public string LastIPAddress;
+      /// <summary>
+      /// The email
+      /// </summary>
       public string Email;
+      /// <summary>
+      /// The company
+      /// </summary>
       public string Company;
     }
+    /// <summary>
+    /// get email form the database as an asynchronous operation.
+    /// </summary>
+    /// <param name="fromDate">From date.</param>
+    /// <returns>Task{IEnumerable{UserEmail}}.</returns>
     public async static Task<IEnumerable<UserEmail>> GetEmailAsync(DateTime fromDate)
     {
       Func<IEnumerable<UserEmail>> _asyncTask = () =>
@@ -43,12 +60,12 @@ namespace CAS.DNNDataBase.DataBaseManagement
             (from user in _newContext.dnn1_Users
              join portal in _newContext.dnn1_UserPortals on user.UserID equals portal.UserId
              join profile in _newContext.dnn1_UserProfiles on user.UserID equals profile.UserID
-             where (user.CreatedOnDate >= fromDate && portal.PortalId == 1 && profile.PropertyValue.Length > 0)
+             where (user.CreatedOnDate >= fromDate && portal.PortalId == 1 && profile.PropertyDefinitionID == 44 )
              select new UserEmail()
              {
                UserName = $"{user.FirstName} {user.LastName}",
                Email = user.Email,
-               Registered = profile.PropertyDefinitionID == 44,
+               LastIPAddress = user.LastIPAddress,
                Company = profile.PropertyValue
              });
           _myList = _myQuery.Distinct<UserEmail>(new Comparer()).ToList<UserEmail>();
@@ -60,7 +77,7 @@ namespace CAS.DNNDataBase.DataBaseManagement
     /// <summary>
     /// Class Comparer.
     /// </summary>
-    /// <seealso cref="System.Collections.Generic.IEqualityComparer{CAS.DNNDataBase.DataBaseManagement.DNNDataClassesDataContext.UserEmail}" />
+    /// <seealso cref="IEqualityComparer{UserEmail}" />
     private class Comparer : IEqualityComparer<UserEmail>
     {
       /// <summary>

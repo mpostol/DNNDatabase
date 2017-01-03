@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="intranetdnn" Class="DNNLocalizationDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CAS_06\SQLEXPRESS;Initial Catalog=intranetdnn;Persist Security Info=True;User ID=sa" SettingsObjectName="CAS.DNNDataBase.DataBaseManagement.Properties.Settings" SettingsPropertyName="intranetdnnConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization" Member="dnn1_Delisoft_TabLocalizations">
+    <Type Name="dnn1_Delisoft_TabLocalization">
+      <Column Name="TabId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocaleKey" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TabName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TabTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TabDescription" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RedirectTo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="RequireSSL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisableLink" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KeyWords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SkinSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ContainerSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IconFile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SqlViewState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UseWhiteSpaceRemover" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminSkinSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AdminContainerSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LogoFile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AdjustSqlSession" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AntiSessionExpiration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AntiSessionExpirationTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization_Files" Member="dnn1_Delisoft_TabLocalization_Files">
+    <Type Name="dnn1_Delisoft_TabLocalization_File">
+      <Column Name="FileId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PortalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FriendlyName" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="FileType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguagesIncluded" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TabsIncluded" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FileURL" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FileOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Disabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization_Modules" Member="dnn1_Delisoft_TabLocalization_Modules">
+    <Type Name="dnn1_Delisoft_TabLocalization_Module">
+      <Column Name="ModuleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocaleKey" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleTitle" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="IconFile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Alignment" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Header" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Footer" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ContainerSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModuleHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdminSkinSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AdminContainerSrc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization_Options" Member="dnn1_Delisoft_TabLocalization_Options">
+    <Type Name="dnn1_Delisoft_TabLocalization_Option">
+      <Column Name="PortalId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UseSQLViewState" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UseTabLocalization" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UseModuleLocalization" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnableSearch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SQLViewStateIP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TabPreviewEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePortalSettingsLocalization" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorNotUsingCookie" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorNotUsingParam" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorNotUsingBrowser" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorParamText" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SqlViewStatePerPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorNotUsingGeoIP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorCookieName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LocaleDetectionOrder" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="UseWhiteSpaceRemover" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UseLocaleTranslation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LocaleTranslationRules" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SelectorParamAutoreplaceURL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SelectorParamAutoreplaceSOLPART" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PortalAliasDefaults" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CustomNames" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="AdjustSqlSession" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AntiSessionExpiration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AntiSessionExpirationTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForceParamExistance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization_Portals" Member="dnn1_Delisoft_TabLocalization_Portals">
+    <Type Name="dnn1_Delisoft_TabLocalization_Portal">
+      <Column Name="PortalId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocaleKey" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PortalName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="LogoFile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FooterText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KeyWords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BackgroundFile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HomeTabId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginTabId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserTabId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SplashTabId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultPortalSkin" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DefaultPortalContainer" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DefaultAdminSkin" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DefaultAdminContainer" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization_Replacements" Member="dnn1_Delisoft_TabLocalization_Replacements">
+    <Type Name="dnn1_Delisoft_TabLocalization_Replacement">
+      <Column Name="ReplacementId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PortalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReplacementName" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguagesIncluded" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TabsIncluded" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SearchFor" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ReplaceWith" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ReplacementOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Disabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Delisoft_TabLocalization_ViewState" Member="dnn1_Delisoft_TabLocalization_ViewStates">
+    <Type Name="dnn1_Delisoft_TabLocalization_ViewState">
+      <Column Name="vsKey" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="vsValue" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="LastDate" Type="System.String" Scope="User">
-      <Value Profile="(Default)">161116</Value>
+      <Value Profile="(Default)">170102</Value>
     </Setting>
     <Setting Name="DateFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">yyMMdd</Value>

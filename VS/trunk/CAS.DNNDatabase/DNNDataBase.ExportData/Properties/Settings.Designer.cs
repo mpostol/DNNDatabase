@@ -25,7 +25,7 @@ namespace CAS.DNNDataBase.ExportData.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("161116")]
+        [global::System.Configuration.DefaultSettingValueAttribute("170102")]
         public string LastDate {
             get {
                 return ((string)(this["LastDate"]));
