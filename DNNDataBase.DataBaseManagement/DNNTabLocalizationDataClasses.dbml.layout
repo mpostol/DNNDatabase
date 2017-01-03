@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.875" name="DNNLocalizationDataClasses">
+  <DataContextMoniker Name="/DNNLocalizationDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="da612b20-0e7e-4996-93b2-542be9f50b71" absoluteBounds="0.75, 0.75, 2.375, 5.0400211588541666">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d773ef3-51ae-4774-ac99-b11603b847f6" absoluteBounds="0.765, 1.21, 2.3449999999999998, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72c38453-820c-4a0c-8f07-c3467c339b47" absoluteBounds="3.75, 0.75, 2.5, 2.5401025390625005">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization_File" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b89320b-35e9-4702-a3ae-f87a7a382cbf" absoluteBounds="3.765, 1.21, 2.4699999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="763135f7-d059-4484-beae-5d54098a5389" absoluteBounds="3.625, 3.5, 3, 2.9247054036458326">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization_Module" />
+      <nestedChildShapes>
+        <elementListCompartment Id="851e3475-480a-4573-a29a-97ab8a983e6f" absoluteBounds="3.64, 3.96, 2.9699999999999998, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cd12e41-70b9-460a-9ab6-58b1e7a572d0" absoluteBounds="7.75, 0.75, 2.5, 6.0015283203124987">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization_Option" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bb6014b-e633-4f61-a3c2-3a7dc288f822" absoluteBounds="7.7650000000000006, 1.21, 2.4699999999999998, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1febc724-23ea-499f-8263-0deda27d627d" absoluteBounds="7.75, 7.75, 2.25, 3.8862125651041666">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization_Portal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a219ec60-8e66-4826-bfbc-f139f7a732ba" absoluteBounds="7.765, 8.21, 2.2199999999999998, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04a6edd2-bd34-4a0f-b04f-62170e0c1187" absoluteBounds="0.75, 8.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization_Replacement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="117a8160-5af9-4ef6-93cf-bcba24b3acb7" absoluteBounds="0.76499999999999968, 9.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b8907e1-82f3-4054-875c-315a623bcd9b" absoluteBounds="3.75, 8.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DNNLocalizationDataClassesDataContext/dnn1_Delisoft_TabLocalization_ViewState" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b3a7907-408d-4b1b-b3cf-60ed111b45e7" absoluteBounds="3.7649999999999997, 9.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

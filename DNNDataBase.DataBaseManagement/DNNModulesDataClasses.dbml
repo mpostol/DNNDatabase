@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="intranetdnn" Class="DNNModulesDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CAS_06\SQLEXPRESS;Initial Catalog=intranetdnn;Persist Security Info=True;User ID=sa" SettingsObjectName="CAS.DNNDataBase.DataBaseManagement.Properties.Settings" SettingsPropertyName="intranetdnnConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dnn1_Modules" Member="dnn1_Modules">
+    <Type Name="dnn1_Module">
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModuleDefID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AllTabs" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InheritViewPermissions" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PortalID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContentItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="dnn1_Module_dnn1_HtmlText" Member="dnn1_HtmlTexts" ThisKey="ModuleID" OtherKey="ModuleID" Type="dnn1_HtmlText" />
+      <Association Name="dnn1_Module_dnn1_Link" Member="dnn1_Links" ThisKey="ModuleID" OtherKey="ModuleID" Type="dnn1_Link" />
+      <Association Name="dnn1_Module_dnn1_Announcement" Member="dnn1_Announcements" ThisKey="ModuleID" OtherKey="ModuleID" Type="dnn1_Announcement" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_HtmlText" Member="dnn1_HtmlTexts">
+    <Type Name="dnn1_HtmlText">
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsPublished" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="dnn1_Module_dnn1_HtmlText" Member="dnn1_Module" ThisKey="ModuleID" OtherKey="ModuleID" Type="dnn1_Module" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Links" Member="dnn1_Links">
+    <Type Name="dnn1_Link">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ViewOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="CreatedByUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="dnn1_Module_dnn1_Link" Member="dnn1_Module" ThisKey="ModuleID" OtherKey="ModuleID" Type="dnn1_Module" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dnn1_Announcements" Member="dnn1_Announcements">
+    <Type Name="dnn1_Announcement">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ViewOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedByUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImageSource" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="dnn1_Module_dnn1_Announcement" Member="dnn1_Module" ThisKey="ModuleID" OtherKey="ModuleID" Type="dnn1_Module" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
