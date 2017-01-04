@@ -44,15 +44,14 @@ namespace CAS.DNNDataBase.UsersManagement
     #region metody
     private void WriteXML()
     {
-      FileStream myFileStream = new FileStream(saveFileDialog1.FileName.ToString(), System.IO.FileMode.Create, FileAccess.ReadWrite);
+      FileStream myFileStream = new FileStream(saveFileDialog1.FileName.ToString(), FileMode.Create, FileAccess.ReadWrite);
       //Create an XmlTextWriter with the fileStream.
-      using (XmlTextWriter myXmlWriter = new XmlTextWriter(myFileStream, System.Text.Encoding.GetEncoding(1250)))
+      using (XmlTextWriter myXmlWriter = new XmlTextWriter(myFileStream, Encoding.GetEncoding(1250)))
       {
         myXmlWriter.WriteStartDocument();
         myXmlWriter.WriteProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"arkusz_stylu.xsl\"");
         myXmlWriter.Formatting = Formatting.Indented;
         kontakty.WriteXml(myXmlWriter);
-        myXmlWriter.Close();
       }
     }
     private void ReadXML()
