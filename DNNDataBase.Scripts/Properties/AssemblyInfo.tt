@@ -31,7 +31,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("<#= OPCUASDKVersion #>.*")]
 [assembly: AssemblyFileVersion("<#= OPCUASDKVersion #>")]
 
-<#@ include file = "..\..\PR39-CommonResources\T4Definitions\OPC.t4" #>
+<#@ include file = "..\..\T4Definitions\OPC.t4" #>
 <#+
 string m_AssemblyTitle = "CAS.CommServer.UA.Stack.Core";
 #>

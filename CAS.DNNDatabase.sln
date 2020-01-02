@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.UsersManagement", "DNNDataBase.UsersManagement\DNNDataBase.UsersManagement.csproj", "{E204F3B4-F9EE-4F04-B235-7BD158A759D7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Definitions", "PR39-CommonResources\T4Definitions\T4Definitions.csproj", "{D506423B-BA21-49E6-8C3B-88A771CA444E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.DataBaseManagement", "DNNDataBase.DataBaseManagement\DNNDataBase.DataBaseManagement.csproj", "{9EB44A90-A66B-4892-940B-FBD904EDBA56}"
 EndProject
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.ExportData", "DNNDataBase.ExportData\DNNDataBase.ExportData.csproj", "{E1C573A3-D4BE-49A6-9564-6512A54DB9A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNDataBase.Scripts", "DNNDataBase.Scripts\DNNDataBase.Scripts.csproj", "{9980473B-E30A-4DD9-91FC-15126D050E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Definitions", "T4Definitions\T4Definitions.csproj", "{D506423B-BA21-49E6-8C3B-88A771CA444E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{E204F3B4-F9EE-4F04-B235-7BD158A759D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E204F3B4-F9EE-4F04-B235-7BD158A759D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E204F3B4-F9EE-4F04-B235-7BD158A759D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9EB44A90-A66B-4892-940B-FBD904EDBA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9EB44A90-A66B-4892-940B-FBD904EDBA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB44A90-A66B-4892-940B-FBD904EDBA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,8 +41,15 @@ Global
 		{9980473B-E30A-4DD9-91FC-15126D050E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9980473B-E30A-4DD9-91FC-15126D050E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9980473B-E30A-4DD9-91FC-15126D050E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D506423B-BA21-49E6-8C3B-88A771CA444E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1BA9F26-AED6-4449-AE67-A2A7EAF73983}
 	EndGlobalSection
 EndGlobal
